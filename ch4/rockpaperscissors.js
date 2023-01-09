@@ -19,26 +19,32 @@ let player = {
 }
 
 let playerChoice = prompt("Please type 'rock', 'paper', or 'scissors' to play");
-switch(playerChoice) {
-    case 'rock':
-    case 'Rock':
-        player.playerArr[0] = true;
-        break;
-
-    case 'paper':
-    case 'Paper':
-        player.playerArr[1] = true;
-        break;
-
-    case 'scissors':
-    case 'Scissors':
-    case 'scissor':
-    case 'Scissor':
-        player.playerArr[2] = true;
-        break;
+let switchBool = false; 
+while (!switchBool) {
+    switch(playerChoice) {
+        case 'rock':
+        case 'Rock':
+            player.playerArr[0] = true;
+            switchBool = true;
+            break;
     
-    default:
-        playerChoice = prompt(`${playerChoice} is an invalid choice.`);
+        case 'paper':
+        case 'Paper':
+            player.playerArr[1] = true;
+            switchBool = true;
+            break;
+    
+        case 'scissors':
+        case 'Scissors':
+        case 'scissor':
+        case 'Scissor':
+            player.playerArr[2] = true;
+            switchBool = true;
+            break;
+        
+        default:
+            playerChoice = prompt(`${playerChoice} is an invalid choice.`);
+    }
 }
 
 /*
