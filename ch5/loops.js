@@ -11,3 +11,9 @@ console.log(arrKeys);
 for(let i = 0; i < arrKeys.length; i++) {
     console.log(arrKeys[i] + ": " + car[arrKeys[i]]);
 }
+
+// // 'for in' loop for Objects
+// for (key in car) {
+//     console.log(`${key}: ${car[key]}`);
+// }
+
